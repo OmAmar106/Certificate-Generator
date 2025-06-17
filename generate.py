@@ -100,7 +100,7 @@ def create_overlay(path, nameeng, namehind, btid, branch, cgpa,srno):
     buffer = io.BytesIO()
     img.save(buffer, format="PNG")
     buffer.seek(0)
-    c.drawImage(ImageReader(buffer), x=504, y=726, width=48, height=48)
+    c.drawImage(ImageReader(buffer), x=500, y=710, width=48, height=48)
 
 
     draw_superscript_date(c,date,y=letter[1]-545.63-14.999999375000016-98.5,x=289)

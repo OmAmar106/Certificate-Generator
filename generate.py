@@ -33,6 +33,9 @@ t = 'DEGREE INFORMATION SHEET.xlsx'
 t = input("Enter File Name : ")
 date, hindidate, session, df = fetchdata.getdata(t)
 
+bchname = 'संगणक विज्ञान एवं अभियांत्रिकी'
+bchname = input("Enter Branch Name in Hindi : ")
+
 def get_day_suffix(day):
     if 11<=day<=13:
         return 'th'
@@ -104,8 +107,6 @@ def create_overlay(path, nameeng, namehind, btid, branch, cgpa,srno):
     buffer.seek(0)
     c.drawImage(ImageReader(buffer), x=500, y=710, width=48, height=48)
 
-    bchname = 'संगणक विज्ञान एवं अभियांत्रिकी'
-    bchname = input("Enter Branch Name in Hindi : ")
     draw_superscript_date(c,date,y=letter[1]-545.63-14.999999375000016-98.5,x=289)
     write(c,namehind,y=letter[1]-545.63-14.999999375000016+381,fontname='Hindi',fontsize=18)
     write(c,unicodedata.normalize('NFC',bchname),y=letter[1]-545.63-14.999999375000016+316,fontname='Hindi',fontsize=18)
